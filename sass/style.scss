@@ -1,0 +1,570 @@
+@import './colors';
+@import './var';
+@import './animation';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 81px;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #444;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $main-color;
+}
+
+.blue-text {
+    color: $main-color;
+}
+
+.shadow-bg {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+// Navigation
+
+nav {
+    text-transform: uppercase;
+    transition: background-color .6s;
+    z-index: 1;
+
+    a {
+        color: $white-color;
+    }
+
+    a:hover {
+        color: #039dff;
+    }
+
+    .nav-link {
+        color: $white-color;
+    }
+
+    .nav-link:hover {
+        color: $main-color;
+    }
+
+    .fa-bars {
+        padding: 10px;
+        color: $white-color;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    .active {
+        color: $main-color;
+    }
+}
+
+// header
+
+header {
+    color: $white-color;
+
+    h1 {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hero-img {
+        position: relative;
+        height: 100vh;
+        background-image: url(../img/rocks-640.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+
+    .hero-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: -10;
+    }
+
+    .hero-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .btn-outline-light {
+        text-transform: uppercase;
+    }
+
+    .fa-chevron-down {
+        position: absolute;
+        bottom: 20px;
+        font-size: 36px;
+        left: 50%;
+        transform: translate(-50%);
+        color: $white-color;
+    }
+}
+
+// Main
+
+.aboutus {
+
+    .container {
+
+        .cards {
+            display: flex;
+
+            .card {
+                position: relative;
+                height: 600px;
+                width: 500px;
+                text-align: center;
+                background-position: center;
+                background-size: cover;
+                border-radius: 15px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, .7);
+                overflow: hidden;
+                margin: 10px auto;
+            }
+
+            .one {
+                margin: 50px;
+                background-image: url(../img/Kara.jpeg);
+            }
+
+            button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 36px;
+                text-shadow: 2px 2px 5px rgb(0, 0, 0);
+                cursor: crosshair;
+                z-index: 10;
+            }
+
+            button:hover~.text {
+                clip-path: circle(115% at 50% 90%);
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding: 80px 30px;
+                background-color: rgba(0, 0, 0, .85);
+                color: white;
+                clip-path: circle(0 at 50% 90%);
+                transition: clip-path .9s;
+            }
+
+            h1 {
+                color: rgb(182, 179, 97)
+            }
+
+            h2 {
+                margin-bottom: 30px;
+                color: rgb(141, 138, 138);
+            }
+
+        }
+    }
+}
+
+
+.aboutus-yoga {
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/yoga-640.jpg);
+    background-position: center;
+    background-size: cover;
+    color: $ddd-color;
+    z-index: 0;
+
+    i {
+        margin-top: 20px;
+        font-size: 36px;
+    }
+
+    .aboutus-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
+        z-index: -5;
+    }
+
+    .aboutus-yoga-item {
+        margin: 10px 0;
+
+        i {
+            font-size: 36px;
+        }
+    }
+
+    .aboutus-yoga-title {
+        font-size: 24px;
+    }
+
+    .aboutus-yoga-text {
+        font-size: 24px;
+    }
+}
+
+.aboutus-massage {
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/wellness-640.jpg);
+    background-position: center;
+    background-size: cover;
+    color: $ddd-color;
+    z-index: 0;
+
+    i {
+        margin-top: 20px;
+        font-size: 36px;
+    }
+
+    .aboutus-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
+        z-index: -5;
+    }
+
+    .aboutus-massage-item {
+        margin: 10px 0;
+
+        i {
+            font-size: 36px;
+        }
+    }
+
+    .aboutus-massage-title {
+        font-size: 24px;
+    }
+
+    .aboutus-massage-text {
+        font-size: 24px;
+    }
+}
+
+.gallery {
+
+    .carousel-item {
+        position: relative;
+        height: 600px;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 30px 0;
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-indicators {
+        padding-bottom: 10px;
+    }
+}
+
+.blog {
+    height: 100vh;
+}
+
+.contact {
+    position: relative;
+    background-image: url(../img/poppies-contact1920.jpg);
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+
+    h2 {
+        color: $ddd-color;
+        font-weight: bold;
+    }
+
+    .underline {
+        background-color: $ddd-color;
+    }
+
+    .contact-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3);
+        z-index: -5;
+    }
+
+    .contact-us {
+        display: flex;
+        align-items: center;
+        color: $white-color;
+
+        .contact-items {
+            margin: 30px 0;
+        }
+
+        h3 {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+
+        }
+
+        .social-media {
+            font-size: 26px;
+        }
+
+        a {
+            padding: 10px;
+            color: $white-color;
+        }
+
+    }
+
+}
+
+// Media query
+
+@media (min-width: 320px) {
+    main {
+        .aboutus {
+            padding-top: 1rem !important;
+
+            .underline {
+                margin-bottom: 15px;
+            }
+
+            p {
+                margin-bottom: 5px;
+
+                i {
+                    font-size: 34px;
+                }
+            }
+
+            .aboutus-card-title {
+                padding-top: 5px;
+                font-size: 32px;
+            }
+
+            .aboutus-card-text {
+                margin-top: 5px;
+                font-size: 17px;
+            }
+        }
+
+        .aboutus-yoga {
+            padding-top: 1rem !important;
+
+            .underline {
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin-bottom: 5px;
+            }
+
+            .aboutus-yoga-title {
+                font-size: 28px;
+            }
+
+            .aboutus-yoga-text {
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+
+        .aboutus-massage {
+            padding-top: 1rem !important;
+
+            .underline {
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin-bottom: 2px;
+            }
+
+            .aboutus-massage-text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    header {
+        h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    main {
+
+        .aboutus {
+            margin: 0 auto;
+            padding-top: 1rem;
+
+            .container {
+
+                h2 {
+                    font-size: 26px;
+                }
+
+                .underline {
+                    margin: 0 auto 20px;
+                }
+
+                .aboutus-card-title {
+                    padding-top: 5px;
+                }
+
+                .aboutus-card-text {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .aboutus-yoga {
+
+            .aboutus-yoga-text {
+                padding-top: 20px;
+                font-size: 18px;
+            }
+        }
+
+        .aboutus-massage {
+            .aboutus-massage-text {
+                font-size: 18px;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 414px) {
+    .aboutus {
+        .container {
+            h2 {
+                font-size: 26px;
+            }
+
+            .aboutus-card-title {
+                padding-top: 5px;
+            }
+
+            .aboutus-card-text {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        h1 {
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    }
+
+    main {
+        .aboutus-yoga {
+            .container {
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    nav {
+        height: 82px;
+    }
+
+    .aboutus-yoga {
+        background-image: url(../img/yoga-1920.jpg);
+    }
+
+    .aboutus-massage {
+        background-image: url(../img/wellness-1920.jpg);
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        .hero-img {
+            background-image: url(../img/rocks-1920.jpg);
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .gallery {
+        .carousel-item {
+            height: 500px;
+        }
+    }
+}
+
+@media (min-width: 1900px) {
+    .gallery {
+        .carousel-item {
+            height: 750px;
+        }
+    }
+}
