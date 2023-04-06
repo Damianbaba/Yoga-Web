@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Playfair+Display+SC&display=swap");
 .bounce-top {
   display: block;
   -webkit-animation: bounce-top 2s infinite both;
@@ -38,10 +39,7 @@
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
-  25%,
-  55%,
-  75%,
-  87% {
+  25%, 55%, 75%, 87% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     -webkit-animation-timing-function: ease-out;
@@ -78,10 +76,7 @@
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
-  25%,
-  55%,
-  75%,
-  87% {
+  25%, 55%, 75%, 87% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     -webkit-animation-timing-function: ease-out;
@@ -95,7 +90,6 @@
     opacity: 1;
   }
 }
-
 *,
 *::before,
 *::after {
@@ -111,13 +105,20 @@ html {
 
 body {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #444;
 }
 
 h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+}
+
+p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
 }
 
 .underline {
@@ -132,41 +133,34 @@ h2 {
 }
 
 .shadow-bg {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 nav {
   text-transform: uppercase;
-  -webkit-transition: background-color .6s;
-  transition: background-color .6s;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
   z-index: 1;
 }
-
 nav a {
   color: #fff;
 }
-
 nav a:hover {
   color: #039dff;
 }
-
 nav .nav-link {
   color: #fff;
 }
-
 nav .nav-link:hover {
   color: #039dff;
 }
-
 nav .fa-bars {
   padding: 10px;
   color: #fff;
 }
-
 nav .navbar-brand {
   font-weight: bold;
 }
-
 nav .active {
   color: #039dff;
 }
@@ -174,26 +168,22 @@ nav .active {
 header {
   color: #fff;
 }
-
 header h1 {
   font-size: 30px;
   text-transform: uppercase;
 }
-
 header p {
   font-size: 14px;
 }
-
 header .hero-img {
   position: relative;
   height: 100vh;
-  background-image: url(../img/rocks-640.jpg);
+  background-image: url(../img/mobile/header.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   z-index: 0;
 }
-
 header .hero-shadow {
   position: absolute;
   width: 100%;
@@ -201,7 +191,6 @@ header .hero-shadow {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -10;
 }
-
 header .hero-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,11 +210,9 @@ header .hero-text {
   text-align: center;
   z-index: 5;
 }
-
 header .btn-outline-light {
   text-transform: uppercase;
 }
-
 header .fa-chevron-down {
   position: absolute;
   bottom: 20px;
@@ -236,84 +223,27 @@ header .fa-chevron-down {
   color: #fff;
 }
 
-.aboutus .container .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.aboutus .container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
-.aboutus .container .cards .card {
-  position: relative;
-  height: 600px;
-  width: 500px;
-  text-align: center;
-  background-position: center;
-  background-size: cover;
-  border-radius: 15px;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  margin: 10px auto;
+.aboutus .container img {
+  width: 100%;
 }
-
-.aboutus .container .cards .one {
-  margin: 50px;
-  background-image: url(../img/Kara.jpeg);
+.aboutus .container .text {
+  margin-top: 20px;
 }
-
-.aboutus .container .cards button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 36px;
-  text-shadow: 2px 2px 5px black;
-  cursor: crosshair;
-  z-index: 10;
+.aboutus .container .text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-
-.aboutus .container .cards button:hover ~ .text {
-  -webkit-clip-path: circle(115% at 50% 90%);
-          clip-path: circle(115% at 50% 90%);
-}
-
-.aboutus .container .cards .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 80px 30px;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: white;
-  -webkit-clip-path: circle(0 at 50% 90%);
-          clip-path: circle(0 at 50% 90%);
-  -webkit-transition: -webkit-clip-path .9s;
-  transition: -webkit-clip-path .9s;
-  transition: clip-path .9s;
-  transition: clip-path .9s, -webkit-clip-path .9s;
-}
-
-.aboutus .container .cards h1 {
-  color: #b6b361;
-}
-
-.aboutus .container .cards h2 {
-  margin-bottom: 30px;
-  color: #8d8a8a;
+.aboutus .container .text p {
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .aboutus-yoga {
@@ -325,12 +255,10 @@ header .fa-chevron-down {
   color: #ddd;
   z-index: 0;
 }
-
 .aboutus-yoga i {
   margin-top: 20px;
   font-size: 36px;
 }
-
 .aboutus-yoga .aboutus-shadow {
   position: absolute;
   top: 0;
@@ -339,19 +267,15 @@ header .fa-chevron-down {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -5;
 }
-
 .aboutus-yoga .aboutus-yoga-item {
   margin: 10px 0;
 }
-
 .aboutus-yoga .aboutus-yoga-item i {
   font-size: 36px;
 }
-
 .aboutus-yoga .aboutus-yoga-title {
   font-size: 24px;
 }
-
 .aboutus-yoga .aboutus-yoga-text {
   font-size: 24px;
 }
@@ -365,12 +289,10 @@ header .fa-chevron-down {
   color: #ddd;
   z-index: 0;
 }
-
 .aboutus-massage i {
   margin-top: 20px;
   font-size: 36px;
 }
-
 .aboutus-massage .aboutus-shadow {
   position: absolute;
   top: 0;
@@ -379,19 +301,15 @@ header .fa-chevron-down {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -5;
 }
-
 .aboutus-massage .aboutus-massage-item {
   margin: 10px 0;
 }
-
 .aboutus-massage .aboutus-massage-item i {
   font-size: 36px;
 }
-
 .aboutus-massage .aboutus-massage-title {
   font-size: 24px;
 }
-
 .aboutus-massage .aboutus-massage-text {
   font-size: 24px;
 }
@@ -400,7 +318,6 @@ header .fa-chevron-down {
   position: relative;
   height: 600px;
 }
-
 .gallery .carousel-caption {
   position: absolute;
   left: 0;
@@ -408,7 +325,6 @@ header .fa-chevron-down {
   padding: 30px 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 .gallery .carousel-indicators {
   padding-bottom: 10px;
 }
@@ -425,16 +341,13 @@ header .fa-chevron-down {
   background-size: cover;
   z-index: 0;
 }
-
 .contact h2 {
   color: #ddd;
   font-weight: bold;
 }
-
 .contact .underline {
   background-color: #ddd;
 }
-
 .contact .contact-shadow {
   position: absolute;
   top: 0;
@@ -443,7 +356,6 @@ header .fa-chevron-down {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: -5;
 }
-
 .contact .contact-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,20 +365,16 @@ header .fa-chevron-down {
           align-items: center;
   color: #fff;
 }
-
 .contact .contact-us .contact-items {
   margin: 30px 0;
 }
-
 .contact .contact-us h3 {
   margin-bottom: 15px;
   text-transform: uppercase;
 }
-
 .contact .contact-us .social-media {
   font-size: 26px;
 }
-
 .contact .contact-us a {
   padding: 10px;
   color: #fff;
@@ -522,7 +430,6 @@ header .fa-chevron-down {
     font-size: 14px;
   }
 }
-
 @media (min-width: 375px) {
   header h1 {
     font-size: 36px;
@@ -555,7 +462,6 @@ header .fa-chevron-down {
     font-size: 18px;
   }
 }
-
 @media (min-width: 414px) {
   .aboutus .container h2 {
     font-size: 26px;
@@ -567,7 +473,6 @@ header .fa-chevron-down {
     font-size: 22px;
   }
 }
-
 @media (min-width: 768px) {
   header h1 {
     font-size: 40px;
@@ -581,7 +486,6 @@ header .fa-chevron-down {
     margin-bottom: 100px;
   }
 }
-
 @media (min-width: 992px) {
   nav {
     height: 82px;
@@ -593,22 +497,18 @@ header .fa-chevron-down {
     background-image: url(../img/wellness-1920.jpg);
   }
 }
-
 @media (min-width: 1200px) {
   header .hero-img {
-    background-image: url(../img/rocks-1920.jpg);
+    background-image: url(../img/mobile/header.webp);
   }
 }
-
 @media (min-width: 1366px) {
   .gallery .carousel-item {
     height: 500px;
   }
 }
-
 @media (min-width: 1900px) {
   .gallery .carousel-item {
     height: 750px;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
