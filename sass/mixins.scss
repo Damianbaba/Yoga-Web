@@ -1,0 +1,10 @@
+@mixin myFont($font-size: 18px){
+    font-size: $font-size;
+    text-transform: uppercase;
+    // font-family: 'Spectral', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+@mixin myParagraph($font-size: 10px){
+    font-size: $font-size;
+    font-family: 'Spectral', serif;
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Spectral:wght@200;400&display=swap");
 .bounce-top {
   display: block;
   -webkit-animation: bounce-top 2s infinite both;
@@ -105,20 +105,19 @@ html {
 
 body {
   position: relative;
-  font-family: "Montserrat", sans-serif;
   background-color: #444;
 }
 
-h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: bold;
-  text-align: center;
+h1 {
+  font-size: 14px;
   text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  line-height: 26px;
 }
 
 p {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: bold;
+  font-size: 12px;
+  font-family: "Spectral", serif;
 }
 
 .underline {
@@ -168,13 +167,6 @@ nav .active {
 header {
   color: #fff;
 }
-header h1 {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-header p {
-  font-size: 14px;
-}
 header .hero-img {
   position: relative;
   height: 100vh;
@@ -191,7 +183,7 @@ header .hero-shadow {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -10;
 }
-header .hero-text {
+header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,10 +202,16 @@ header .hero-text {
   text-align: center;
   z-index: 5;
 }
+header .container .hero-text {
+  position: relative;
+  top: 194px;
+}
 header .btn-outline-light {
+  display: none;
   text-transform: uppercase;
 }
 header .fa-chevron-down {
+  display: none;
   position: absolute;
   bottom: 20px;
   font-size: 36px;
@@ -236,14 +234,6 @@ header .fa-chevron-down {
 }
 .aboutus .container .text {
   margin-top: 20px;
-}
-.aboutus .container .text h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.aboutus .container .text p {
-  font-size: 16px;
-  line-height: 1.7;
 }
 
 .aboutus-yoga {
@@ -431,13 +421,6 @@ header .fa-chevron-down {
   }
 }
 @media (min-width: 375px) {
-  header h1 {
-    font-size: 36px;
-    text-transform: uppercase;
-  }
-  header p {
-    font-size: 16px;
-  }
   main .aboutus {
     margin: 0 auto;
     padding-top: 1rem;
@@ -475,11 +458,14 @@ header .fa-chevron-down {
 }
 @media (min-width: 768px) {
   header h1 {
-    font-size: 40px;
+    font-size: 18px;
     text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
   }
   header p {
-    font-size: 22px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
   }
   main .aboutus-yoga .container {
     margin-top: 100px;
