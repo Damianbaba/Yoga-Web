@@ -1,0 +1,126 @@
+/* Mobile first styles */
+.yoga-section {
+  background-color: #f9f9f9;
+  padding: 50px 15px;
+}
+.yoga-section .container {
+  max-width: 100%;
+}
+.yoga-section .container .section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.yoga-section .container .section-description {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.yoga-section .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.yoga-section .container .row .col-md-6 {
+  margin-bottom: 40px;
+}
+.yoga-section .container .row .col-md-6:first-of-type {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.yoga-section .container .row .col-md-6 img {
+  max-width: 100%;
+}
+.yoga-section .container .row .yoga-class-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.yoga-section .container .row .yoga-class-date {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.yoga-section .container .row .yoga-class-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.yoga-section .container .row .btn {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-color: #ff8c00;
+  color: #fff;
+}
+.yoga-section .container .row .btn:hover {
+  background-color: #ff6d00;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 576px) {
+  .yoga-section {
+    padding: 75px 30px;
+  }
+  .yoga-section .container .section-title {
+    font-size: 48px;
+  }
+  .yoga-section .container .section-description {
+    font-size: 24px;
+  }
+  .yoga-section .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .yoga-section .container .row .col-md-6 {
+    margin-bottom: 0;
+  }
+  .yoga-section .container .row .col-md-6:first-of-type {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .yoga-section {
+    padding: 100px 60px;
+  }
+  .yoga-section .container .section-title {
+    font-size: 60px;
+  }
+  .yoga-section .container .section-description {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .yoga-section {
+    padding: 120px 90px;
+  }
+  .yoga-section .container .row .col-md-6 {
+    margin-bottom: 0;
+  }
+  .yoga-section .container .row .col-md-6:first-of-type {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-right: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .yoga-section .container .row .col-md-6:first-of-type {
+    margin-right: 90px;
+  }
+}/*# sourceMappingURL=yogaSection.css.map */
