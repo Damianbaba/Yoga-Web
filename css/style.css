@@ -90,6 +90,163 @@
     opacity: 1;
   }
 }
+.bio-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.bio-section .bio-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.bio-section .bio-content:hover {
+  -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.bio-section .bio-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.bio-section .bio-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.bio-section .bio-content button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.bio-section .bio-content button:hover {
+  background-color: #1a5276;
+}
+.bio-section .bio-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bio-section .bio-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 250px; /* Adjust the maximum height as per your preference */
+}
+.bio-section .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.bio-section .modal .modal-content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 80%;
+  margin: 10% auto;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bio-section .modal .modal-content h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.bio-section .modal .modal-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+.bio-section .modal .modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 400px; /* Adjust the maximum height as per your preference */
+  margin-bottom: 20px;
+}
+.bio-section .modal .modal-content .exitBtn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: auto;
+}
+.bio-section .modal .modal-content .exitBtn:hover {
+  background-color: #c0392b;
+}
+@media (max-width: 1024px) {
+  .bio-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bio-section .bio-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -125,8 +282,9 @@ h2 {
 }
 
 p {
-  font-size: 12px;
+  font-size: 20px;
   font-family: "Spectral", serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .shadow-bg {
@@ -217,240 +375,4 @@ header .fa-chevron-down {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   color: #fff;
-}
-
-.aboutus .container {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #fff;
-}
-.aboutus .container h2 {
-  text-transform: uppercase;
-}
-.aboutus .container img {
-  width: 100%;
-  margin: 10px auto 10px;
-}
-.aboutus .container .text {
-  margin-top: 20px;
-}
-
-.aboutus-yoga {
-  position: relative;
-  height: 100vh;
-  background-color: #FFF;
-  z-index: 0;
-}
-.aboutus-yoga .aboutus-yoga-title {
-  font-size: 24px;
-}
-.aboutus-yoga .aboutus-yoga-text {
-  font-size: 24px;
-}
-
-.aboutus-massage {
-  position: relative;
-  height: 100vh;
-  background-color: #FFF;
-  z-index: 0;
-}
-.aboutus-massage .aboutus-massage-item {
-  margin: 10px 0;
-}
-.aboutus-massage .aboutus-massage-text {
-  font-size: 24px;
-}
-
-.gallery .carousel-item {
-  position: relative;
-  height: 600px;
-}
-.gallery .carousel-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 30px 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.gallery .carousel-indicators {
-  padding-bottom: 10px;
-}
-
-.blog {
-  height: 100vh;
-}
-
-.contact {
-  position: relative;
-  background-image: url(../img/poppies-contact1920.jpg);
-  background-position: bottom;
-  background-attachment: fixed;
-  background-size: cover;
-  z-index: 0;
-}
-.contact h2 {
-  color: #ddd;
-  font-weight: bold;
-}
-.contact .underline {
-  background-color: #ddd;
-}
-.contact .contact-shadow {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: -5;
-}
-.contact .contact-us {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-}
-.contact .contact-us .contact-items {
-  margin: 30px 0;
-}
-.contact .contact-us h3 {
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-.contact .contact-us .social-media {
-  font-size: 26px;
-}
-.contact .contact-us a {
-  padding: 10px;
-  color: #fff;
-}
-
-@media (min-width: 320px) {
-  main .aboutus {
-    padding-top: 1rem !important;
-  }
-  main .aboutus .underline {
-    margin-bottom: 15px;
-  }
-  main .aboutus p {
-    margin-bottom: 5px;
-  }
-  main .aboutus p i {
-    font-size: 34px;
-  }
-  main .aboutus .aboutus-card-title {
-    padding-top: 5px;
-    font-size: 32px;
-  }
-  main .aboutus .aboutus-card-text {
-    margin-top: 5px;
-    font-size: 17px;
-  }
-  main .aboutus-yoga {
-    padding-top: 1rem !important;
-  }
-  main .aboutus-yoga .underline {
-    margin-bottom: 5px;
-  }
-  main .aboutus-yoga p {
-    margin-bottom: 5px;
-  }
-  main .aboutus-yoga .aboutus-yoga-title {
-    font-size: 28px;
-  }
-  main .aboutus-yoga .aboutus-yoga-text {
-    margin-top: 20px;
-    font-size: 16px;
-  }
-  main .aboutus-massage {
-    padding-top: 1rem !important;
-  }
-  main .aboutus-massage .underline {
-    margin-bottom: 5px;
-  }
-  main .aboutus-massage p {
-    margin-bottom: 2px;
-  }
-  main .aboutus-massage .aboutus-massage-text {
-    font-size: 14px;
-  }
-}
-@media (min-width: 375px) {
-  main .aboutus {
-    margin: 0 auto;
-    padding-top: 1rem;
-  }
-  main .aboutus .container h2 {
-    text-align: center;
-    font-size: 26px;
-  }
-  main .aboutus .container .underline {
-    margin: 0 auto 20px;
-  }
-  main .aboutus-yoga .aboutus-yoga-text {
-    padding-top: 20px;
-    font-size: 18px;
-  }
-  main .aboutus-massage .aboutus-massage-text {
-    font-size: 18px;
-  }
-}
-@media (min-width: 414px) {
-  .aboutus .container h2 {
-    font-size: 26px;
-  }
-  .aboutus .container .aboutus-card-title {
-    padding-top: 5px;
-  }
-  .aboutus .container .aboutus-card-text {
-    font-size: 22px;
-  }
-}
-@media (min-width: 768px) {
-  header h1 {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
-  }
-  header p {
-    font-size: 28px;
-    text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
-  }
-  main .aboutus-yoga .container {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}
-@media (min-width: 992px) {
-  nav {
-    height: 82px;
-  }
-  .aboutus-yoga {
-    background-image: url(../img/yoga-1920.jpg);
-  }
-  .aboutus-massage {
-    background-image: url(../img/wellness-1920.jpg);
-  }
-}
-@media (min-width: 1200px) {
-  header .hero-img {
-    background-image: url(../img/mobile/header.webp);
-  }
-}
-@media (min-width: 1366px) {
-  .gallery .carousel-item {
-    height: 500px;
-  }
-}
-@media (min-width: 1900px) {
-  .gallery .carousel-item {
-    height: 750px;
-  }
 }/*# sourceMappingURL=style.css.map */

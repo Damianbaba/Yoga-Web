@@ -1,0 +1,45 @@
+.aboutus-yoga .container .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+}
+.aboutus-yoga .container .card-container .card {
+  width: 320px;
+  background-color: ivory;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.aboutus-yoga .container .card-container .card__body {
+  padding: 10px 20px;
+}
+.aboutus-yoga .container .card-container .card__text {
+  margin: 20px 0;
+}
+.aboutus-yoga .container .card-container .card__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.aboutus-yoga .container .card-container .card__btn {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.aboutus-yoga .container .card-container .card__btn--highlight {
+  background-color: rgb(33, 218, 132);
+  background-color: #fbfbf2;
+}/*# sourceMappingURL=yogaCards.css.map */

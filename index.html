@@ -17,6 +17,7 @@
   <script src="https://kit.fontawesome.com/8bf66320ba.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./sass/css/yogaCards.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="82">
@@ -35,7 +36,7 @@
         <!-- <div class="navbar-nav"> -->
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" href="#home">home</a>
-          <a class="nav-link" href="#aboutus">bio</a>
+          <a class="nav-link" href="#bio">bio</a>
           <a class="nav-link" href="#yoga">yoga</a>
           <a class="nav-link" href="#massage">masaż</a>
           <a class="nav-link" href="#gallery">galeria</a>
@@ -49,7 +50,6 @@
   <!-- Header -->
 
   <header id="home">
-
     <div class="hero-img">
       <div class="hero-shadow"></div>
       <div class="container">
@@ -67,82 +67,345 @@
       </div>
       <a href="#aboutus"><i class="fas fa-chevron-down bounce-top"></i></a>
     </div>
-
   </header>
 
   <!-- Main -->
+
   <main>
 
-    <section id="aboutus" class="aboutus py-5">
-      <div class="container">
-        <h2>Kara Sun</h2>
-        <div class="underline"></div>
+    <!-- section with modal -->
 
-        <!-- New element -->
-        <img src="./img/mobile/karaBio.webp" alt="Image description">
-        <div class="text">
-          <!-- <h2>Witojcie</h2> -->
-          <p>Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz instruktorką
+    <section id="bio" class="bio-section">
+      <div class="bio-content">
+        <h2>Yoga Instructor</h2>
+        <p>
+          Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz instruktorką
+          jogi.
+          Jestem pozytywnie nastawiona do życia i zainteresowana jego różnorodnością. Chęć pomagania innym jest moim
+          atutem, która dodaje mi energii każdego dnia. Propagowanie zdrowego stylu życia stało się niemalże moją
+          misją.
+          ...
+        </p>
+        <button id="readMoreBtn">Read More</button>
+      </div>
+      <div class="bio-image">
+        <img src="./img/mobile/karamassage.webp" alt="Yoga Instructor">
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal" id="bioModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <span class="closeBtn" id="closeModal">&times;</span>
+        <div class="modal-content">
+
+          <h2>Yoga Instructor</h2>
+          <p>
+            Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz instruktorką
+            jogi.
+            Jestem pozytywnie nastawiona do życia i zainteresowana jego różnorodnością. Chęć pomagania innym jest moim
+            atutem, która dodaje mi energii każdego dnia. Propagowanie zdrowego stylu życia stało się niemalże moją
+            misją.
+            Po wielu eksperymentach i różnych doświadczeniach, praktykach, które pomogły mi lepiej poznać i zrozumieć
+            samą siebie, zdecydowałam się na praktykowanie jogi. Inspiracją dla mnie była również obserwacja mojej
+            bratniej duszy a właściwie zmiany jakie się w nim dokonywały podczas jego ciężki samopoznania. Dzięki
+            ćwiczeniom, koncentracji, medytacji i świadomemu oddychaniu odblokowały się we mnie mechanizmy, które
+            doprowadziły do mojego rozwoju fizycznego, umysłowego i duchowego. Ten proces inspiracji popchnął mnie do
+            ukończenia 200-godzinnego kursu z zakresu Multistyle YTTC w standardzie Yoga Alliance w dalekich Indiach.
+            Specjalizuję się również w masażu terapeutycznym całego ciała. Masaż jest moją pasją już od 14 lat, dzięki
+            czemu cały czas poznaję ciało, umysł i ducha, a to wszystko razem daje ukojenie i równowagę. Koncentruję
+            się
+            na oczekiwaniach każdej osoby, z którą pracuję.
+            Świadome przeżywanie dnia codziennego pozwala mi na odnajdywanie sensu w życiu. Joga uświadamia mi, jak
+            prawdziwe jest życie w tu i teraz oraz to, że to nie cel jest najważniejszy, ale droga, doświadczenia i to,
+            czego się na niej uczysz. Jak powiedział Antoine de Saint-Exupéry: "Liczy się jedynie droga. To ona trwa, a
+            nie cel, który jest złudzeniem wędrownika, kiedy idzie od jednego grzbietu góry ku drugiemu, tak jakby
+            osiągnięty cel miał jakiś sens."
+            Zapraszam Cię do wspólnego odkrywania samego siebie. Dzielę się swoją pasją z oddaniem i zaangażowaniem, a
+            każda osoba, która chce uczestniczyć w moich zajęciach i terapiach, jest dla mnie wyjątkowa. Z miłością
+            oddaję się temu, co robię
+
+            ...
+            <br><br>
+            Additional content and details about the yoga instructor.
+          </p>
+          <img src="./img/mobile/karaBio.webp" alt="Yoga Instructor">
+          <button class="exitBtn" id="exitModal">Exit</button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section id="aboutus" class="aboutus py-5">
+      <div class="container-md">
+        <div class="container-md">
+
+          <div class="row mb-4">
+            <div class="col-lg-7 col-md-12">
+              <div class="image-holder">
+                <img src="./img/mobile/karaabout.webp" alt="review" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12" data-aos="fade-right">
+              <div class="info-detail bg-primary-light">
+                <p>Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz
+                  instruktorką
+                  jogi. Jestem pozytywnie nastawiona do życia i zainteresowana jego różnorodnością. Chęć pomagania innym
+                  jest
+                  moim atutem, która dodaje mi energii każdego dnia. Propagowanie zdrowego stylu życia stało się
+                  niemalże moją
+                  misją.</p>
+                <a href="#" class="btn btn-dark btn-small text-uppercase mt-3 btn-pill">Czytaj więcej</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-5 col-md-12" data-aos="fade-left">
+              <div class="info-detail bg-primary-light">
+                <p>“True yoga is not about the shape of your body, but the shape of your life. Yoga is not to be
+                  performed;
+                  yoga is to be lived. Yoga doesn’t care about what you have been; yoga cares about the person you are
+                  becoming.
+                  Yoga is designed for a vast and profound purpose, and for it to be truly called yoga,
+                  its essence must be embodied.” — Aadil Palkhivala</p>
+                <a href="#" class="btn btn-primary btn-small text-uppercase mt-3 btn-pill">join us</a>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+              <div class="image-holder">
+                <img src="./img/mobile/karaabout.webp" alt="review" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div class="row mb-4">
+          <div class="col-lg-7 col-md-12">
+            <div class="image_holder">
+              <img class="image-fluid" src="./img/mobile/karaBio.webp" alt="Image">
+            </div>
+            <div class="col-lg-5 col-md-12  aboutus_description">
+              <div class="text">
+                <p>Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz
+                  instruktorką
+                  jogi. Jestem pozytywnie nastawiona do życia i zainteresowana jego różnorodnością. Chęć pomagania innym
+                  jest
+                  moim atutem, która dodaje mi energii każdego dnia. Propagowanie zdrowego stylu życia stało się
+                  niemalże moją
+                  misją.</p>
+                <a type="button" href="aboutus.html" class="btn btn-dark">Czytaj więcej</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+    <!-- New element -->
+    <!-- <img src="./img/mobile/karaBio.webp" alt="Image description">
+          <div class="text"> -->
+    <!-- <h2>Witojcie</h2> -->
+    <!-- <p>Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz instruktorką
             jogi. Jestem pozytywnie nastawiona do życia i zainteresowana jego różnorodnością. Chęć pomagania innym jest
             moim atutem, która dodaje mi energii każdego dnia. Propagowanie zdrowego stylu życia stało się niemalże moją
             misją.</p><br>
-          <p>
-            Po wielu eksperymentach i różnych doświadczeniach, praktykach, które pomogły mi lepiej poznać i zrozumieć
-            samą siebie, zdecydowałam się na praktykowanie jogi. Inspiracją dla mnie była również obserwacja mojej
-            bratniej duszy a właściwie zmiany jakie się w nim dokonywały podczas jego ściężki samopoznania. Dzięki
-            ćwiczeniom, koncentracji, medytacji i świadomemu oddychaniu odblokowały się we mnie mechanizmy, które
-            doprowadziły do mojego rozwoju fizycznego, umysłowego i duchowego. Ten proces inspiracji popchnął mnie do
-            ukończenia 200-godzinnego kursu z zakresu Multistyle YTTC w standardzie Yoga Alliance w dalekich Indiach
-          </p>
-          <img src="./img/mobile/karamassage.webp" alt="Image description">
+
+          <a type="button" href="aboutus.html" class="btn btn-dark">Czytaj więcej</a> -->
+
+
+
+    <!-- <img src="./img/mobile/karamassage.webp" alt="Image description">
           <p>Specjalizuję się również w masażu terapeutycznym całego ciała. Masaż jest moją pasją już od 14 lat, dzięki
             czemu cały czas poznaję ciało, umysł i ducha, a to wszystko razem daje ukojenie i równowagę. Koncentruję się
             na oczekiwaniach każdej osoby, z którą pracuję</p>
-        </div>
-        <p>Świadome przeżywanie dnia codziennego pozwala mi na odnajdywanie sensu w życiu. Joga uświadamia mi, jak
+          </div>
+          <p>Świadome przeżywanie dnia codziennego pozwala mi na odnajdywanie sensu w życiu. Joga uświadamia mi, jak
           prawdziwe jest życie w tu i teraz oraz to, że to nie cel jest najważniejszy, ale droga, doświadczenia i to,
           czego się na niej uczysz. Jak powiedział Antoine de Saint-Exupéry: "Liczy się jedynie droga. To ona trwa, a
           nie cel, który jest złudzeniem wędrownika, kiedy idzie od jednego grzbietu góry ku drugiemu, tak jakby
           osiągnięty cel miał jakiś sens."</p>
-        <p>Zapraszam Cię do wspólnego odkrywania samego siebie. Dzielę się swoją pasją z oddaniem i zaangażowaniem, a
+          <p>Zapraszam Cię do wspólnego odkrywania samego siebie. Dzielę się swoją pasją z oddaniem i zaangażowaniem, a
           każda osoba, która chce uczestniczyć w moich zajęciach i terapiach, jest dla mnie wyjątkowa. Z miłością
-          oddaję się temu, co robię.</p>
-      </div>
-    </section>
+          oddaję się temu, co robię.</p> -->
 
-    <section id="yoga" class="aboutus-yoga py-5">
+
+    <!-- </div>
+    </section> -->
+
+    <!-- <section id="yoga" class="aboutus-yoga py-5">
       <div class="aboutus-shadow"></div>
       <div class="container">
         <h2>Yoga dla Wszystkich</h2>
         <div class="underline"></div>
         <p class="aboutus-yoga-text">
-          Zajęcia Jogi są dostosowane do osób na każdym etapie praktyki. Praktyka dynamiczna, zwykle poranna połączona z
-          oddechem ukierunkowana będzie na zdrowy zrównoważony wysiłek, ożywi i nastroi pozytywną energią. Poczujesz
-          pogłębioną świadomość ciała i oddechu. Praktyka wzmacnia i buduje w nas koncentrację. Natomiast praktyka
-          restoratywna zwykle popołudniowa bądź wieczorna pozwoli się skupić na odczuciach w ciele, przyniesie fizyczny
-          odpoczynek przez rozluźnienie ciała. Czas pozostawania w asanach jest dłuższy. Podczas zajęć zsynchronizujesz
-          ruch z oddechem koncentrując się na chwili teraźniejszej. Daj się poprowadzić przez oddech  Zapraszam Cię do
-          eksploracji samego siebie.
+          Joga to nie tylko zestaw ćwiczeń fizycznych, ale przede wszystkim narzędzie, które pozwala nam na wycofanie
+          się z chaosu zewnętrznego świata i zanurzenie się w naszej wewnętrznej rzeczywistości. Joga to głęboka
+          filozofia życiowa, która pomaga w osiągnięciu harmonii ciała, umysłu i ducha. Poprzez praktykowanie jogi,
+          uczymy się akceptować siebie i otaczający nas świat takim, jakim jest, niezależnie od jego wad i zalet.
+          Joga pomaga nam odkryć naszą wewnętrzną mądrość i intuicję, co umożliwia nam podejmowanie bardziej świadomych
+          wyborów w życiu. Poprzez regularną praktykę jogi, możemy zbalansować swoje ciało, umysł i ducha, co przyczynia
+          się do naszego ogólnego samopoczucia i dobrej kondycji fizycznej.
+          Zachęcamy każdego, kto szuka sposobu na odprężenie i balansowanie swojego życia, do spróbowania jogi. To
+          doskonałe narzędzie, które pozwoli Ci na odnalezienie wewnętrznej harmonii i szczęścia.
         </p>
+        <div class="card-container"> 
+    <div class="card">
+            <img src="./img/mobile/woman-640.webp" alt="" class="card__img">
+            <div class="card__body">
+              <h2 class="card_title">Warsztaty</h2>
+              <p class="card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nemo
+                quisquam
+                suscipit ex, odit explicabo necessitatibus amet accusantium eos esse.</p>
+              <div class="card__btns">
+                <div class="card__btn">More info</div>
+                <div class="card__btn card__btn--highlight">Czytaj wiecej</div>
+              </div>
+            </div>
+          </div>
+    <div class="card">
+      <img src="./img/mobile/yoga-640.webp" alt="" class="card__img">
+      <div class="card__body">
+        <h2 class="card_title">Joga Indywidualna</h2>
+        <p class="card__text">Joga indywidualna to niesamowita przygoda dla każdego, kto chce bardziej
+          skoncentrować się na swoim ciele, umyśle i duchu.</p>
+        <div class="card__btns">
+          <div class="card__btn">More info</div>
+          <div class="card__btn card__btn--highlight">Czytaj wiecej</div>
+        </div>
       </div>
+    </div>
+    <div class="card">
+      <img src="./img/mobile/woman-640.webp" alt="" class="card__img">
+      <div class="card__body">
+        <h2 class="card_title">Joga Grupowa</h2>
+        <p class="card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nemo
+          quisquam
+          suscipit ex, odit explicabo necessitatibus amet accusantium eos esse.</p>
+        <div class="card__btns">
+          <div class="card__btn">More info</div>
+          <div class="card__btn card__btn--highlight">Czytaj wiecej</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./img/mobile/yoga-640.webp" alt="" class="card__img">
+      <div class="card__body">
+        <h2 class="card_title">Joga Online</h2>
+        <p class="card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nemo
+          quisquam
+          suscipit ex, odit explicabo necessitatibus amet accusantium eos esse.</p>
+        <div class="card__btns"> -->
+    <!-- <div class="card__btn">More info</div>
+          <div class="card__btn card__btn--highlight">Czytaj wiecej</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <p class="aboutus-yoga-text">Zajęcia Jogi są dostosowane do osób na każdym etapie praktyki. Praktyka dynamiczna,
+      zwykle poranna połączona z oddechem ukierunkowana będzie na zdrowy zrównoważony wysiłek, ożywi i nastroi
+      pozytywną energią. Poczujesz pogłębioną świadomość ciała i oddechu. Praktyka wzmacnia i buduje w nas
+      koncentrację. Natomiast praktyka restoratywna zwykle popołudniowa bądź wieczorna pozwoli się skupić na
+      odczuciach w ciele, przyniesie fizyczny odpoczynek przez rozluźnienie ciała. Czas pozostawania w asanach jest
+      dłuższy. Podczas zajęć zsynchronizujesz ruch z oddechem koncentrując się na chwili teraźniejszej. Daj się
+      poprowadzić przez oddech  Zapraszam Cię do eksploracji samego siebie.
+    </p>
+    </div>
     </section>
 
-    <section id="massage" class="aboutus-massage py-5">
+    <!-- <section id="massage" class="aboutus-massage py-5">
       <div class="aboutus-shadow"></div>
       <div class="container">
         <h2>Masaż terapeutyczny</h2>
         <div class="underline"></div>
-
       </div>
       </div>
     </section>
 
     <section id="gallery" class="gallery bg-light py-5">
-      <div class="container">
+      <div class="container"> -->
 
-        <!-- Gallery Mobile -->
+    <!-- Gallery Mobile -->
 
-        <div class="card-group d-md-none pr-1">
+    <!-- <div class="card-group d-md-none pr-1">
           <div class="card">
             <img src="img/mountains-640.jpg" class="card-img-top" alt="mountains">
             <div class="card-body">
@@ -179,11 +442,11 @@
               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <!-- Gallery Desktop -->
+    <!-- Gallery Desktop -->
 
-        <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+    <!-- <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
               aria-current="true" aria-label="Slide 1"></button>
@@ -245,13 +508,13 @@
           </button>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="blog" class="blog">
+    <!-- <section id="blog" class="blog">
       <div style="height: 100vh bg-light-py-5"></div>
-    </section>
+    </section> -->
 
-    <section id="contact" class="contact py-5">
+    <!-- <section id="contact" class="contact py-5">
       <h2>kontakt</h2>
       <div class="underline"></div>
       <div class="container">
@@ -281,7 +544,7 @@
         </div>
       </div>
       <div class="contact-shadow"></div>
-    </section>
+    </section> -->
 
   </main>
 
