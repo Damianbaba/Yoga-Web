@@ -17,7 +17,6 @@
   <script src="https://kit.fontawesome.com/8bf66320ba.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./sass/css/yogaCards.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="82">
@@ -75,7 +74,8 @@
 
     <!-- section with modal -->
 
-    <section id="bio" class="bio-section">
+    <section id="bio" class="bio-section py-5">
+
       <div class="bio-content">
         <h2>Yoga Instructor</h2>
         <p>
@@ -86,10 +86,15 @@
           misją.
           ...
         </p>
-        <button id="readMoreBtn">Read More</button>
+        <div class="btn-container">
+          <button id="readMoreBtn">Czytaj dalej</button>
+        </div>
       </div>
+
+
+
       <div class="bio-image">
-        <img src="./img/mobile/karamassage.webp" alt="Yoga Instructor">
+        <img src="./img/mobile/header.webp" alt="Yoga Instructor">
       </div>
 
 
@@ -99,7 +104,8 @@
         <span class="closeBtn" id="closeModal">&times;</span>
         <div class="modal-content">
 
-          <h2>Yoga Instructor</h2>
+          <!-- <h2>Kara Sun</h2> -->
+          <img src="./img/mobile/karaBio.webp" alt="Yoga Instructor">
           <p>
             Hey, tu Kara Sun! Jestem dyplomowaną terapeutką z wieloletnim doświadczeniem w masażu oraz instruktorką
             jogi.
@@ -127,9 +133,8 @@
 
             ...
             <br><br>
-            Additional content and details about the yoga instructor.
+
           </p>
-          <img src="./img/mobile/karaBio.webp" alt="Yoga Instructor">
           <button class="exitBtn" id="exitModal">Exit</button>
         </div>
       </div>
