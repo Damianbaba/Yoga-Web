@@ -1,5 +1,5 @@
 @import './colors';
-@import './animation';
+// @import './animation';
 @import './mixins.scss';
 @import '../sass/modules/BioSectionModal.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Spectral:wght@200;400&display=swap');
@@ -25,8 +25,14 @@ body {
 }
 
 h1{
-    @include myFont(14px);
-    line-height: 26px;
+    @include myFont(15px);
+    line-height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+//     @mixin myParagraph($font-size: 10px){
+//     font-size: $font-size;
+//     font-family: 'Spectral', serif;
+// }
 }
 
 h2{
@@ -40,8 +46,12 @@ h2{
 
 p{
 
-   @include myParagraph(20px);
-   font-family: 'Open Sans', sans-serif;
+//    @include myParagraph(20px);
+//    font-family: 'Open Sans', sans-serif;
+   @mixin myParagraph($font-size: 10px){
+    font-size: $font-size;
+    font-family: 'Spectral', serif;
+}
     
 }
 
@@ -57,7 +67,7 @@ p{
 // }
 
 .shadow-bg {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .2);
 }
 
 // Navigation
@@ -66,34 +76,27 @@ nav {
     text-transform: uppercase;
     transition: background-color .6s;
     z-index: 1;
-
     a {
-        color: $white-color;
+    color: $white-color;
     }
-
     a:hover {
-        color: #039dff;
+    color: #039dff;
     }
-
     .nav-link {
-        color: $white-color;
+    color: $white-color;
     }
-
     .nav-link:hover {
-        color: $main-color;
+    color: $main-color;
     }
-
     .fa-bars {
-        padding: 10px;
-        color: $white-color;
+    padding: 10px;
+    color: $white-color;
     }
-
     .navbar-brand {
-        font-weight: bold;
+    font-weight: bold;
     }
-
     .active {
-        color: $main-color;
+    color: $main-color;
     }
 }
 
@@ -105,7 +108,6 @@ header {
         position: relative;
         height: 100vh;
         background-image: url(../img/mobile/karaScorpion.webp);
-        // background-image: url(../img/mobile/header.webp);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -132,7 +134,7 @@ header {
 
         .hero-text{
             position: relative;
-            top: 194px;
+            top: 220px;
         }
     }
 
@@ -154,6 +156,44 @@ header {
 
 
 
+
+// Media
+
+@media (min-width:768px){
+header{
+    .hero-img{
+        .container{
+            .hero-text{
+                max-width: 450px;
+                top: 280px;
+                    .description{
+                    @include myFont(18px);
+                    }
+                    .description-name{
+                        @include myFont(18px);
+                    }
+                }
+
+            }
+        }
+    }
+
+    main{
+        .bio-section{
+            height: 100vh;
+            .bio-content {
+                p{
+                    font-size: 18px;
+                }
+            }
+            .bio-image{
+                img{
+                    max-width: none;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -202,8 +242,6 @@ header {
 
 
 // Main
-
-
 // .aboutus{
 //     .container-md{
 //         max-width: 1450px;
@@ -224,23 +262,6 @@ header {
         
 //     }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // .aboutus {
 //     .container {
 //         width: 100%;
@@ -264,8 +285,6 @@ header {
 //         }
 //     }
 // }
-
-
 // .aboutus-yoga {
 //     position: relative;
 //     // height: 100vh;
@@ -315,13 +334,9 @@ header {
 //     }
 // }
 
-
-
 // .blog {
 //     height: 100vh;
 // }
-
-
 
 // .contact {
 //     position: relative;
