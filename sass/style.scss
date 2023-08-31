@@ -170,10 +170,9 @@ header{
                     @include myFont(18px);
                     }
                     .description-name{
-                        @include myFont(18px);
+                    @include myFont(18px);
                     }
                 }
-
             }
         }
     }
@@ -192,6 +191,78 @@ header{
                 }
             }
         }
+    }
+}
+
+@media (min-width:992px){
+header{
+    .hero-img{
+        .container{
+            .hero-text{
+                top: 100px;
+                .description{
+                    font-size: 1.1rem;
+                    line-height: 26px;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+}
+
+    main{
+        .bio-section{ 
+            .bio-content{
+            max-width: 80%;
+            margin: 0 auto;
+            }
+            .bio-image{
+                img{
+                max-width: 350px;
+                }
+            }  
+        }
+
+        .modal{
+            .modal-content{
+                img{
+                margin: 20px 0;
+                }
+                p{
+                padding: 0 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+
+    main{
+            .bio-section{
+                flex-wrap: nowrap;
+                padding: 0;
+                .container{
+                display: flex;
+
+                .bio-content{
+                    position: relative;
+                    top: 280px;
+                    height: 280px;
+                }
+                
+                .bio-image{
+                padding: 0;
+                img{
+                position: relative;
+                top: 100px;
+                left: 100px;
+                max-width: 500px;
+                }
+                }
+            }
+            }
+        
     }
 }
 

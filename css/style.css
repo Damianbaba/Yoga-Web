@@ -13,9 +13,6 @@
   margin: 0 auto;
 }
 .bio-section .bio-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -26,8 +23,8 @@
   margin-bottom: 15px;
 }
 .bio-section .bio-content p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.4;
   color: #666;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -92,8 +89,8 @@
 }
 .bio-section .modal .modal-content {
   background-color: #fff;
-  padding: 20px;
-  max-width: 80%;
+  padding: 15px;
+  max-width: 90%;
   margin: 10% auto;
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -294,5 +291,54 @@ header .fa-chevron-down {
   }
   main .bio-section .bio-image img {
     max-width: none;
+  }
+}
+@media (min-width: 992px) {
+  header .hero-img .container .hero-text {
+    top: 100px;
+  }
+  header .hero-img .container .hero-text .description {
+    font-size: 1.1rem;
+    line-height: 26px;
+    text-transform: none;
+  }
+  main .bio-section .bio-content {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  main .bio-section .bio-image img {
+    max-width: 350px;
+  }
+  main .modal .modal-content img {
+    margin: 20px 0;
+  }
+  main .modal .modal-content p {
+    padding: 0 50px;
+  }
+}
+@media (min-width: 1024px) {
+  main .bio-section {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+  }
+  main .bio-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .bio-section .container .bio-content {
+    position: relative;
+    top: 280px;
+    height: 280px;
+  }
+  main .bio-section .container .bio-image {
+    padding: 0;
+  }
+  main .bio-section .container .bio-image img {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    max-width: 500px;
   }
 }/*# sourceMappingURL=style.css.map */
