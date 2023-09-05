@@ -321,6 +321,8 @@ header .fa-chevron-down {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     padding: 0;
+    margin: 0 50px;
+    max-width: 100%;
   }
   main .bio-section .container {
     display: -webkit-box;
@@ -329,16 +331,17 @@ header .fa-chevron-down {
   }
   main .bio-section .container .bio-content {
     position: relative;
-    top: 280px;
+    top: 174px;
     height: 280px;
+    max-width: 700px;
   }
   main .bio-section .container .bio-image {
     padding: 0;
   }
   main .bio-section .container .bio-image img {
+    max-width: 800px;
+    max-height: 600px;
     position: relative;
-    top: 100px;
-    left: 100px;
-    max-width: 500px;
+    top: -70px;
   }
 }/*# sourceMappingURL=style.css.map */
