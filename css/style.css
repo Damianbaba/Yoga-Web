@@ -328,12 +328,12 @@ header .fa-chevron-down {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  main .bio-section .container .bio-content {
-    position: relative;
-    top: 174px;
-    height: 280px;
-    max-width: 700px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main .bio-section .container .bio-image {
     padding: 0;
@@ -343,5 +343,17 @@ header .fa-chevron-down {
     max-height: 600px;
     position: relative;
     top: -70px;
+  }
+}
+@media (min-width: 1200px) {
+  main .bio-section .container {
+    max-width: 100%;
+  }
+  main .bio-section .container .bio-content {
+    max-width: 45%;
+    margin-left: 75px;
+  }
+  main .bio-section .modal .modal-content {
+    max-width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
