@@ -344,6 +344,9 @@ header .fa-chevron-down {
     position: relative;
     top: -70px;
   }
+  main .bio-section .modal .modal-content p {
+    font-size: 1.1rem;
+  }
 }
 @media (min-width: 1200px) {
   main .bio-section .container {

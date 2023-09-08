@@ -239,40 +239,48 @@ header{
 @media (min-width:1024px){
 
     main{
-            .bio-section{
-                flex-wrap: nowrap;
-                padding: 0;
-                margin: 0 50px;
-                max-width: 100%;
-                .container{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+        .bio-section{
+            flex-wrap: nowrap;
+            padding: 0;
+            margin: 0 50px;
+            max-width: 100%;
+            .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
                 // width: 100%;
                 // padding: 0;
 
-                .bio-content{
-                    // flex:1;
-                    // padding-right: 20px;
-                    // position: relative;
-                    // top: 174px;
-                    // height: 280px;
-                    // max-width: 700px;
-                }
+            // .bio-content{
+            //         // flex:1;
+            //         // padding-right: 20px;
+            //         // position: relative;
+            //         // top: 174px;
+            //         // height: 280px;
+            //         // max-width: 700px;
+            // }
                 
-                .bio-image{
+            .bio-image{
                     // flex-shrink: 0;
                     // flex: none;
-                        padding: 0;
-                        img{
-                        max-width: 800px;
-                        max-height: 600px;
-                        position: relative;
-                        top: -70px;
-                        }
+                    padding: 0;
+                    img{
+                    max-width: 800px;
+                    max-height: 600px;
+                    position: relative;
+                    top: -70px;
                     }
                 }
             }
+
+            .modal{
+                .modal-content{
+                    p{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
         
     }
 }
